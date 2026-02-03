@@ -1,0 +1,211 @@
+:root {
+  font-family: Inter, sans-serif;
+  font-feature-settings: 'liga' 1, 'calt' 1; 
+}
+
+@supports (font-variation-settings: normal) {
+  :root { font-family: InterVariable, sans-serif; }
+}
+
+body {
+  background: linear-gradient(-45deg, #f4deff, #a786b8, #543563, #311440);
+  background-size: 400% 400%;
+  animation: gradient 25s ease infinite;
+  color: #2f3640;
+  font-family: Courier New, Inter, sans-serif;
+  transition: color 0.3s ease;
+}
+
+@keyframes gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+
+
+/* Page elements */
+header{
+	position: sticky;
+	top: 0;
+	margin-bottom: 20px;
+	box-shadow:10px 10px rgba(0, 0, 0, 0.19);
+	z-index: 10;
+}
+
+footer{
+	text-align: center;
+	border-top: 1px solid rgba(255,255,255,0.1);
+	padding: 1rem 0;
+	font-size: 0.9rem;
+	color: rgba(255,255,255,0.8);
+	background: rgba(0,0,0,0.2);
+	backdrop-filter: blur(5px);
+}
+
+div{
+	border-style:solid;
+	box-shadow:10px 10px rgba(0, 0, 0, 0.19);
+	padding-left: 10px;
+	width: 75%;
+}
+
+/* Text elements */
+h1 {
+	font-family: Courier New, Inter, sans-serif
+}
+
+p{
+	color: black;
+}
+
+ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  list-style: none;
+  margin: 0;
+  border-bottom:2px rgba(0, 0, 0, 0.19);
+  background: linear-gradient(45deg, #f4deff, #a786b8, #543563, #311440);
+  background-size: 400% 400%;
+  animation: gradient 25s ease infinite;
+  clip-path: polygon(
+   20px 0,100% 0,100% calc(100% - 20px),calc(100% - 20px) 100%,0 100%,0 20px
+  );
+}
+
+ul li{
+	display: inline-block;
+	white-space: nowrap;
+	line-height: 1;
+	font-size: clamp(1rem,2vw,1.8rem);
+}
+
+ul li:nth-child(3) {
+	margin-left: auto;
+}
+
+ul li a {
+  display: block;
+  color: black;
+  padding: 14px 16px;
+  text-decoration: none;
+  transition: color 0.4s, background-color 0.4s;
+}
+
+ul li a:hover {
+  background-color: rgba(0,0,0,0.6);
+  color:white;
+}
+
+a{
+  text-decoration-line: none;
+  color: black;
+  background-color: none;
+}
+
+a:hover{
+  color: white;
+}
+
+
+
+/* Classes and IDs */
+#bottom{
+  height: 20px;
+  width:100%;
+  box-shadow: none;
+  border: none;
+}
+
+.lefty {
+  background: rgba(255,255,255,0.7);
+  padding: 2rem;
+  max-width: 800px;
+  margin: 2rem auto;
+  line-height: 1.6;
+  clip-path: polygon(
+   20px 0,100% 0,100% calc(100% - 20px),calc(100% - 20px) 100%,0 100%,0 20px
+  );
+}
+.lefty p + p {
+  margin-top: 1rem;
+}
+
+.container {
+  overflow: hidden;
+  margin: 0 40%;
+  border-radius: 1rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+  width: 20%;
+}
+
+.container:hover {
+  transform: scale(1.03);
+}
+
+.overlay {
+  border-radius: 1rem;
+  border-style: none; 
+  box-shadow:none;
+}
+
+.projects {
+  width: 99%;
+  background: rgba(0,0,0,0.3);
+  box-shadow: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20%;
+}
+
+.project-item {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  width: 180px;
+  height: auto;
+  padding: 0px;
+}
+
+.project-item img {
+  width: 100%;
+  height: auto;
+}
+
+.project-item .desc {
+  width: 83.2%;
+  background: rgba(255,255,255,0.7);
+  padding: 15px;
+  text-align: center;
+  box-shadow: none;
+  border: none;
+}
+
+.blue {
+  background: linear-gradient(-45deg, #090f3e, #03327c, #084cba, #06a5db);
+  background-size: 400% 400%;
+  animation: gradient 25s ease infinite;
+}
+
+.bluehead {
+  background: linear-gradient(45deg, #090f3e, #03327c, #084cba, #06a5db);
+  background-size: 400% 400%;
+  animation: gradient 25s ease infinite;
+}
+
+.beige {
+  background: linear-gradient(-45deg, #80622d, #a17f45, #ddb369, #f9cf86);
+  background-size: 400% 400%;
+  animation: gradient 25s ease infinite;
+}
+
+.beigehead {
+  border-bottom:2px rgba(0, 0, 0, 0.19);
+  background: linear-gradient(45deg, #80622d, #a17f45, #ddb369, #f9cf86);
+  background-size: 400% 400%;
+  animation: gradient 25s ease infinite;
+}
